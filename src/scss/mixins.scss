@@ -1,0 +1,53 @@
+@import "./screens.scss";
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+h1 {
+  font-size: 3.285rem;
+  font-weight: bold;
+  line-height: 110%;
+
+  @include screen("medium") {
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2.571rem;
+
+  @include screen("medium") {
+    font-weight: 600;
+    font-size: 2.08rem;
+  }
+}
+
+h3 {
+  font-size: 1.5714rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.2857rem;
+  font-weight: bold;
+}
+
+button {
+  padding: 0.812rem 1.875rem;
+  border-radius: 3px;
+  background-color: #ff9a35;
+
+  @include screen("small") {
+    padding: 7px 10px;
+  }
+}
+
+button:focus {
+  outline: none;
+}
